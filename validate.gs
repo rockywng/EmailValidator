@@ -32,13 +32,13 @@ function checkEmailValidator() {
     // when api key has not been added or api key is not valid
     if(!apiKey){
     
-    // return error message
-    var htmlOutput = HtmlService
-      .createHtmlOutput('<p style="text-align:center">Remember to enter an API key in the  <b>Settings</b> tab in cell <b>B1</b>.<br><br></p>')
-      .setWidth(300)
-      .setHeight(300);
+      // return error message
+      var htmlOutput = HtmlService
+        .createHtmlOutput('<p style="text-align:center">Remember to enter an API key in the  <b>Settings</b> tab in cell <b>B1</b>.<br><br></p>')
+        .setWidth(300)
+        .setHeight(300);
 
-    // dialogue title
+      // dialogue title
       return ui.showModalDialog(htmlOutput, 'API Key Required');
     }
 
